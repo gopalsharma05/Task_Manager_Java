@@ -33,7 +33,7 @@
 	    </header>
 		<br><br>
 		<div class="text-center">
-			<form action="/addNewTask">
+			<form action="/addNewTask" method="post">
 				<input type = "hidden" name = "email" value="<%= email %>" />
 				<button class="btn btn-success" type="submit">Add new Task</button>
 			</form>

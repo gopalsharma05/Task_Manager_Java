@@ -44,10 +44,10 @@ public class OtpController {
 			
 			int otp = otpService.generateOTP(email);
 			
-			logger.info("OTP : "+otp);
+//			logger.info("OTP : "+otp);
 			
-			//Generate The Template to send OTP 
-			EmailTemplate template = new EmailTemplate("SendOtp.html");
+			 
+//			EmailTemplate template = new EmailTemplate("SendOtp.html");
 			
 			Map<String,String> replacements = new HashMap<String,String>();
 			replacements.put("user", email);
@@ -57,7 +57,7 @@ public class OtpController {
 //			System.out.println(otp +" is the OTP");
 			
 			
-			String message = template.getTemplate(replacements);
+//			String message = template.getTemplate(replacements);
 //			System.out.println(message +" is the message for the email");
 			
 			myEmailService.sendOtpMessage(email, "OTP -SpringBoot", String.valueOf(otp));

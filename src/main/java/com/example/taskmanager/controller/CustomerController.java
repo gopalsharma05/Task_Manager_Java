@@ -74,7 +74,7 @@ public class CustomerController {
     @RequestMapping("/newTask")
     public ModelAndView addNewTask(@ModelAttribute("nt")Tasks nt, Model m,@RequestParam(name="email") String email)
     {
-    	System.out.println("Email we extracted is : " + email);
+ 	System.out.println("Email we extracted is : " + email);
     	
     	nt.setEmail(email);
     	cserv.addNewTask(nt);
@@ -88,6 +88,7 @@ public class CustomerController {
 			 }
 			 m.addAttribute("tasks", tasks); 
 		 }
+		 m.addAttribute("aaa", email);
     	return new ModelAndView("showTasks");
     }
     
